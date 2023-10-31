@@ -1,28 +1,80 @@
 <nav class="bg-white z-50 fixed w-full h-[5.9rem] border border-b-[#E51F7E] dark:bg-white">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
+    <div class="relative max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
+        <div class="items-center z-50 justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
             <ul
                 class="flex flex-col cursor-pointer items-center font-medium gap-x-28 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white ">
-                <li>
-                    <a href="#"
+                <li class="group">
+                    <div routerLink="/our-products"
                         class="block py-2 pl-3 pr-4 text-[#E51F7E] bg-blue-700 rounded hover:scale-105 md:bg-transparent md:p-0 "
-                        aria-current="page">OUR PRODUCTS</a>
+                        aria-current="page">OUR PRODUCTS</div>
+                    <div
+                        class="absolute gap-x-16 px-[210px] shadow-lg py-12 group-hover:flex -top-[-93px] -left-[0] z-10 w-full hidden bg-white">
+                        <div class="flex flex-col gap-y-2">
+                            <p class="text-[#E51F7E] text-[12px]">PERSONAL CARE</p>
+                            <ul class="text-[10px] space-y-2 font-light text-[#E51F7E]">
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-y-2">
+                            <p class="text-[#E51F7E] text-[12px]">SKIN CARE</p>
+                            <ul class="text-[10px] space-y-2 font-light text-[#E51F7E]">
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-y-2">
+                            <p class="text-[#E51F7E] text-[12px]">MAKE-UP</p>
+                            <ul class="text-[10px] space-y-2 font-light text-[#E51F7E]">
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-y-2">
+                            <p class="text-[#E51F7E] text-[12px]">ACCESSORIES</p>
+                            <ul class="text-[10px] space-y-2 font-light text-[#E51F7E]">
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <a href="#"
                         class="block py-2 pl-3 pr-4 text-[#E51F7E] rounded hover:bg-gray-100 hover:scale-105 md:hover:bg-transparent  md:p-0   dark:hover:bg-gray-700  md:dark:hover:bg-transparent dark:border-gray-700">EVENTS</a>
                 </li>
                 <li>
-                    <img routerLink="/" class="hover:scale-105" src="assets/images/ezpz.svg"/>
+                    <img routerLink="/" class="hover:scale-105" src="assets/images/ezpz.svg" />
+                </li>
+                <li class="group">
+                    <a routerLink="/about/stories"
+                        class="block py-2 pl-3 pr-4 text-[#E51F7E] rounded hover:bg-gray-100 hover:scale-105 md:hover:bg-transparent  md:p-0   dark:hover:bg-gray-700  md:dark:hover:bg-transparent dark:border-gray-700">ABOUT
+                        US</a>
+                    <div
+                        class="absolute gap-x-16 px-[210px] shadow-lg py-12 group-hover:flex -top-[-93px] -left-[0] z-10 w-full hidden bg-white">
+                        <div class="flex flex-col gap-y-2">
+                            <p class="text-[#E51F7E] text-[12px]">OUR STORY</p>
+                            <p class="text-[#E51F7E] text-[12px]">OUR VISION</p>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="#"
-                        class="block py-2 pl-3 pr-4 text-[#E51F7E] rounded hover:bg-gray-100 hover:scale-105 md:hover:bg-transparent  md:p-0   dark:hover:bg-gray-700  md:dark:hover:bg-transparent dark:border-gray-700">ABOUT US</a>
-                </li>   
-                <li>
                     <div class="flex flex-row gap-x-10">
-                        <img src="assets/images/EZPZ/search.svg"/>
-                        <img src="assets/images/EZPZ/account_circle.svg"/>
+                        <div class="group">
+                            <img src="assets/images/EZPZ/search.svg" />
+                            <div
+                                class="absolute group-active:flex shadow-lg group-hover:flex -top-[-93px] -left-[0] z-10 w-full hidden bg-white h-[150px]">
+                            </div>
+                        </div>
+                        <img src="assets/images/EZPZ/account_circle.svg" />
                     </div>
                 </li>
             </ul>
