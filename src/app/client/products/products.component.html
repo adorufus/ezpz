@@ -1,20 +1,105 @@
-<section>
-    <img class="w-full" src="assets/images/banner.svg" />
+<section class="">
+    <owl-carousel-o  [options]="customOptions">
+        <ng-template carouselSlide id="owl-slide-1"><img class="w-full object-cover pt-[55px] md:pt-0"
+                src="assets/images/banner2.jpg" /></ng-template>
+        <ng-template carouselSlide id="owl-slide-2"><img class="w-full pt-[55px] md:pt-0"
+                src="assets/images/banner3.jpg" /></ng-template>
+        <ng-template carouselSlide id="owl-slide-3"><img class="w-full pt-[55px] md:pt-0"
+                src="assets/images/banner4.jpg" /></ng-template>
+    </owl-carousel-o>
 </section>
 
+<div class="relative h-16 w-full bg-black hidden md:flex overflow-x-hidden">
+    <div class="h-full w-full flex animate-marquee text-white gap-x-10 items-center justify-center">
+        <svg *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 8, 8]" width="76" height="13" viewBox="0 0 76 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0.117751 12V0.799999H1.30175V10.976H7.57375V12H0.117751ZM8.89963 12V0.799999H10.0836V12H8.89963ZM14.1118 9.216L14.0638 7.776L20.8478 0.799999H22.2078L17.2638 5.984L16.5918 6.704L14.1118 9.216ZM13.0878 12V0.799999H14.2718V12H13.0878ZM21.1358 12L16.3038 6.432L17.1038 5.568L22.5438 12H21.1358ZM24.8788 5.808H30.7988V6.816H24.8788V5.808ZM25.0068 10.976H31.7428V12H23.8228V0.799999H31.5028V1.824H25.0068V10.976ZM37.4334 12V0.799999H38.6174V12H37.4334ZM43.7975 12V1.824H39.8615V0.799999H48.9175V1.824H44.9815V12H43.7975Z"
+                fill="white" />
+            <path
+                d="M55.6045 5.312H60.9965V7.328H55.6045V5.312ZM55.7965 9.92H61.8925V12H53.2205V0.799999H61.6845V2.88H55.7965V9.92ZM62.5949 12V10.32L69.5229 1.968L69.8429 2.912H62.7229V0.799999H72.1469V2.48L65.2349 10.832L64.9149 9.888H72.3869V12H62.5949ZM73.4093 8.112L72.9133 0.799999H75.8893L75.3933 8.112H73.4093ZM74.4013 12.128C73.9533 12.128 73.5853 11.984 73.2973 11.696C73.0093 11.408 72.8653 11.0667 72.8653 10.672C72.8653 10.2667 73.0093 9.93067 73.2973 9.664C73.5853 9.38667 73.9533 9.248 74.4013 9.248C74.8599 9.248 75.2279 9.38667 75.5053 9.664C75.7933 9.93067 75.9373 10.2667 75.9373 10.672C75.9373 11.0667 75.7933 11.408 75.5053 11.696C75.2279 11.984 74.8599 12.128 74.4013 12.128Z"
+                fill="#F26522" />
+        </svg>
+
+    </div>
+    <div class="absolute top-0 animate-marquee2 h-full w-full flex text-white gap-x-10 items-center justify-center">
+        <svg *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 8, 8]" width="76" height="13" viewBox="0 0 76 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0.117751 12V0.799999H1.30175V10.976H7.57375V12H0.117751ZM8.89963 12V0.799999H10.0836V12H8.89963ZM14.1118 9.216L14.0638 7.776L20.8478 0.799999H22.2078L17.2638 5.984L16.5918 6.704L14.1118 9.216ZM13.0878 12V0.799999H14.2718V12H13.0878ZM21.1358 12L16.3038 6.432L17.1038 5.568L22.5438 12H21.1358ZM24.8788 5.808H30.7988V6.816H24.8788V5.808ZM25.0068 10.976H31.7428V12H23.8228V0.799999H31.5028V1.824H25.0068V10.976ZM37.4334 12V0.799999H38.6174V12H37.4334ZM43.7975 12V1.824H39.8615V0.799999H48.9175V1.824H44.9815V12H43.7975Z"
+                fill="white" />
+            <path
+                d="M55.6045 5.312H60.9965V7.328H55.6045V5.312ZM55.7965 9.92H61.8925V12H53.2205V0.799999H61.6845V2.88H55.7965V9.92ZM62.5949 12V10.32L69.5229 1.968L69.8429 2.912H62.7229V0.799999H72.1469V2.48L65.2349 10.832L64.9149 9.888H72.3869V12H62.5949ZM73.4093 8.112L72.9133 0.799999H75.8893L75.3933 8.112H73.4093ZM74.4013 12.128C73.9533 12.128 73.5853 11.984 73.2973 11.696C73.0093 11.408 72.8653 11.0667 72.8653 10.672C72.8653 10.2667 73.0093 9.93067 73.2973 9.664C73.5853 9.38667 73.9533 9.248 74.4013 9.248C74.8599 9.248 75.2279 9.38667 75.5053 9.664C75.7933 9.93067 75.9373 10.2667 75.9373 10.672C75.9373 11.0667 75.7933 11.408 75.5053 11.696C75.2279 11.984 74.8599 12.128 74.4013 12.128Z"
+                fill="#F26522" />
+        </svg>
+    </div>
+</div>
+
+<div class="relative h-12 w-full bg-black text-white md:hidden flex overflow-x-hidden">
+    <div class="h-full w-full flex animate-marquee text-white pr-2 gap-x-2 items-center justify-center">
+        <svg *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 8, 8]" width="76" height="13" viewBox="0 0 76 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0.117751 12V0.799999H1.30175V10.976H7.57375V12H0.117751ZM8.89963 12V0.799999H10.0836V12H8.89963ZM14.1118 9.216L14.0638 7.776L20.8478 0.799999H22.2078L17.2638 5.984L16.5918 6.704L14.1118 9.216ZM13.0878 12V0.799999H14.2718V12H13.0878ZM21.1358 12L16.3038 6.432L17.1038 5.568L22.5438 12H21.1358ZM24.8788 5.808H30.7988V6.816H24.8788V5.808ZM25.0068 10.976H31.7428V12H23.8228V0.799999H31.5028V1.824H25.0068V10.976ZM37.4334 12V0.799999H38.6174V12H37.4334ZM43.7975 12V1.824H39.8615V0.799999H48.9175V1.824H44.9815V12H43.7975Z"
+                fill="white" />
+            <path
+                d="M55.6045 5.312H60.9965V7.328H55.6045V5.312ZM55.7965 9.92H61.8925V12H53.2205V0.799999H61.6845V2.88H55.7965V9.92ZM62.5949 12V10.32L69.5229 1.968L69.8429 2.912H62.7229V0.799999H72.1469V2.48L65.2349 10.832L64.9149 9.888H72.3869V12H62.5949ZM73.4093 8.112L72.9133 0.799999H75.8893L75.3933 8.112H73.4093ZM74.4013 12.128C73.9533 12.128 73.5853 11.984 73.2973 11.696C73.0093 11.408 72.8653 11.0667 72.8653 10.672C72.8653 10.2667 73.0093 9.93067 73.2973 9.664C73.5853 9.38667 73.9533 9.248 74.4013 9.248C74.8599 9.248 75.2279 9.38667 75.5053 9.664C75.7933 9.93067 75.9373 10.2667 75.9373 10.672C75.9373 11.0667 75.7933 11.408 75.5053 11.696C75.2279 11.984 74.8599 12.128 74.4013 12.128Z"
+                fill="#F26522" />
+        </svg>
+
+    </div>
+    <div class="absolute top-0 animate-marquee2 h-full w-full flex text-white gap-x-2 items-center justify-center">
+        <svg *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 8, 8]" width="76" height="13" viewBox="0 0 76 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0.117751 12V0.799999H1.30175V10.976H7.57375V12H0.117751ZM8.89963 12V0.799999H10.0836V12H8.89963ZM14.1118 9.216L14.0638 7.776L20.8478 0.799999H22.2078L17.2638 5.984L16.5918 6.704L14.1118 9.216ZM13.0878 12V0.799999H14.2718V12H13.0878ZM21.1358 12L16.3038 6.432L17.1038 5.568L22.5438 12H21.1358ZM24.8788 5.808H30.7988V6.816H24.8788V5.808ZM25.0068 10.976H31.7428V12H23.8228V0.799999H31.5028V1.824H25.0068V10.976ZM37.4334 12V0.799999H38.6174V12H37.4334ZM43.7975 12V1.824H39.8615V0.799999H48.9175V1.824H44.9815V12H43.7975Z"
+                fill="white" />
+            <path
+                d="M55.6045 5.312H60.9965V7.328H55.6045V5.312ZM55.7965 9.92H61.8925V12H53.2205V0.799999H61.6845V2.88H55.7965V9.92ZM62.5949 12V10.32L69.5229 1.968L69.8429 2.912H62.7229V0.799999H72.1469V2.48L65.2349 10.832L64.9149 9.888H72.3869V12H62.5949ZM73.4093 8.112L72.9133 0.799999H75.8893L75.3933 8.112H73.4093ZM74.4013 12.128C73.9533 12.128 73.5853 11.984 73.2973 11.696C73.0093 11.408 72.8653 11.0667 72.8653 10.672C72.8653 10.2667 73.0093 9.93067 73.2973 9.664C73.5853 9.38667 73.9533 9.248 74.4013 9.248C74.8599 9.248 75.2279 9.38667 75.5053 9.664C75.7933 9.93067 75.9373 10.2667 75.9373 10.672C75.9373 11.0667 75.7933 11.408 75.5053 11.696C75.2279 11.984 74.8599 12.128 74.4013 12.128Z"
+                fill="#F26522" />
+        </svg>
+    </div>
+</div>
+
 <div class="background">
-    <section class="mx-[2rem] py-5 md:mx-[10.19rem] gap-y-[6rem] flex flex-col items-center justify-center">
-        <div class="flex flex-col justify-center items-center text-center">
+    <section class="mx-[0rem] md:py-5 md:mx-[10.19rem] gap-y-[6rem] flex flex-col items-center justify-center">
+        <div class="flex flex-col mt-16 justify-center items-center text-center">
             <img src="assets/images/product-text.svg" />
         </div>
 
-        <img class="w-full" src="assets/images/product.svg">
+        <div
+            class="w-full group/root grid grid-cols-3 space-x-6 space-y-1 md:space-x-16 md:space-y-10 overflow-x-clip lg:overflow-visible md:mr-9">
+            <img class="z-20 group-hover/root:block hidden pointer-events-none" src="assets/cursor/ezpz.png"
+                alt="custom cursor" appFollowCursor>
+            <div class="group relative" (click)="navigateToProductsPage('bodywash')">
+                <img class="w-full scale-[1.8]" src="assets/images/products/bodywash.svg">
+                <img class="absolute left-0 top-7 w-full hidden group-hover:block cursor-none scale-[1.2]"
+                    src="assets/images/bodywash.svg">
+            </div>
+            <div class="group relative" (click)="navigateToProductsPage('bodyserum')">
+                <img class="w-full scale-[1.8]" src="assets/images/products/bodyserum.svg">
+                <img class="absolute left-0 top-7 w-full hidden group-hover:block cursor-none scale-[1.2]"
+                    src="assets/images/bodyserum.svg">
+            </div>
+            <div class="group relative" (click)="navigateToProductsPage('shampoo')">
+                <img class="w-full scale-[1.8]" src="assets/images/products/shampo.svg">
+                <img class="absolute left-0 top-7 w-full hidden group-hover:block cursor-none scale-[1.2]"
+                    src="assets/images/shampoo.svg">
+            </div>
+        </div>
 
-        <div class="w-[26rem] mx-[2rem] md:text-[20px] text-center">Elevate your daily routine
+        <div class="w-[26rem] md:mt-16 md:w-[600px] mx-[2rem] md:text-[24px] text-center">Elevate your daily routine
             from Monday to Sunday, to unlock
             confidence and peace by the end of every week.</div>
 
-        <img class="w-full" src="assets/images/like-ez.svg" />
+        <!-- <div class="relative h-16 w-full bg-black hidden md:flex overflow-x-hidden">
+            <div class="h-full w-full flex animate-marquee text-white gap-x-10 items-center justify-center">
+
+            </div>
+        </div> -->
+
+
+
 
         <!-- <div class="flex flex-col justify-center items-center text-center">
             <p class="font-bold text-[5.375rem]">SKINSIGHT</p>
@@ -24,6 +109,51 @@
                 This is your skin insights.</div>
         </div> -->
     </section>
+    <div class="relative h-auto w-full flex overflow-x-hidden mt-1 md:mt-10">
+        <div class="flex h-full w-full animate-marquee justify-between gap-x-10 px-10 md:px-14 md:gap-x-14">
+            <svg class="hidden md:block" *ngFor="let item of [1,2,3]" width="315" height="44" viewBox="0 0 315 44"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.224857 43V0.154127H4.75428V39.0827H28.748V43H0.224857ZM36.2685 43V0.154127H40.7979V43H36.2685ZM58.6559 32.3497L58.4723 26.841L84.4246 0.154127H89.6274L70.714 19.9856L68.1432 22.74L58.6559 32.3497ZM54.7386 43V0.154127H59.268V43H54.7386ZM85.5264 43L67.0415 21.6995L70.1019 18.3942L90.9127 43H85.5264ZM102.294 19.3124H124.941V23.1685H102.294V19.3124ZM102.783 39.0827H128.552V43H98.2539V0.154127H127.634V4.07146H102.783V39.0827ZM155.218 43V0.154127H159.748V43H155.218ZM182.013 43V4.07146H166.956V0.154127H201.599V4.07146H186.542V43H182.013Z"
+                    fill="#4D4C4B" />
+                <path
+                    d="M232.077 17.4149H252.705V25.1271H232.077V17.4149ZM232.812 35.0429H256.132V43H222.957V0.154127H255.337V8.11122H232.812V35.0429ZM261.268 43V36.5731L287.771 4.62234L288.995 8.23364H261.757V0.154127H297.809V6.58101L271.367 38.5318L270.143 34.9205H298.727V43H261.268ZM305.087 28.1264L303.189 0.154127H314.574L312.676 28.1264H305.087ZM308.882 43.4897C307.168 43.4897 305.76 42.9388 304.658 41.837C303.556 40.7353 303.006 39.4295 303.006 37.9197C303.006 36.3691 303.556 35.0837 304.658 34.0636C305.76 33.0026 307.168 32.4722 308.882 32.4722C310.636 32.4722 312.044 33.0026 313.105 34.0636C314.207 35.0837 314.758 36.3691 314.758 37.9197C314.758 39.4295 314.207 40.7353 313.105 41.837C312.044 42.9388 310.636 43.4897 308.882 43.4897Z"
+                    fill="#F26522" />
+            </svg>
+            <svg class="md:hidden block" *ngFor="let item of [1,2,3]" width="315 / 2" height="44 / 2"
+                viewBox="0 0 315 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.224857 43V0.154127H4.75428V39.0827H28.748V43H0.224857ZM36.2685 43V0.154127H40.7979V43H36.2685ZM58.6559 32.3497L58.4723 26.841L84.4246 0.154127H89.6274L70.714 19.9856L68.1432 22.74L58.6559 32.3497ZM54.7386 43V0.154127H59.268V43H54.7386ZM85.5264 43L67.0415 21.6995L70.1019 18.3942L90.9127 43H85.5264ZM102.294 19.3124H124.941V23.1685H102.294V19.3124ZM102.783 39.0827H128.552V43H98.2539V0.154127H127.634V4.07146H102.783V39.0827ZM155.218 43V0.154127H159.748V43H155.218ZM182.013 43V4.07146H166.956V0.154127H201.599V4.07146H186.542V43H182.013Z"
+                    fill="#4D4C4B" />
+                <path
+                    d="M232.077 17.4149H252.705V25.1271H232.077V17.4149ZM232.812 35.0429H256.132V43H222.957V0.154127H255.337V8.11122H232.812V35.0429ZM261.268 43V36.5731L287.771 4.62234L288.995 8.23364H261.757V0.154127H297.809V6.58101L271.367 38.5318L270.143 34.9205H298.727V43H261.268ZM305.087 28.1264L303.189 0.154127H314.574L312.676 28.1264H305.087ZM308.882 43.4897C307.168 43.4897 305.76 42.9388 304.658 41.837C303.556 40.7353 303.006 39.4295 303.006 37.9197C303.006 36.3691 303.556 35.0837 304.658 34.0636C305.76 33.0026 307.168 32.4722 308.882 32.4722C310.636 32.4722 312.044 33.0026 313.105 34.0636C314.207 35.0837 314.758 36.3691 314.758 37.9197C314.758 39.4295 314.207 40.7353 313.105 41.837C312.044 42.9388 310.636 43.4897 308.882 43.4897Z"
+                    fill="#F26522" />
+            </svg>
+        </div>
+
+        <!-- <div class="absolute top-0 animate-marquee2 h-full w-full flex text-white gap-x-10 items-center justify-center"></div> -->
+
+        <div class="absolute top-0 flex h-full w-full animate-marquee2 justify-between gap-x-10 md:gap-x-14">
+            <svg class="hidden md:block" *ngFor="let item of [1,2,3]" width="315" height="44" viewBox="0 0 315 44"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.224857 43V0.154127H4.75428V39.0827H28.748V43H0.224857ZM36.2685 43V0.154127H40.7979V43H36.2685ZM58.6559 32.3497L58.4723 26.841L84.4246 0.154127H89.6274L70.714 19.9856L68.1432 22.74L58.6559 32.3497ZM54.7386 43V0.154127H59.268V43H54.7386ZM85.5264 43L67.0415 21.6995L70.1019 18.3942L90.9127 43H85.5264ZM102.294 19.3124H124.941V23.1685H102.294V19.3124ZM102.783 39.0827H128.552V43H98.2539V0.154127H127.634V4.07146H102.783V39.0827ZM155.218 43V0.154127H159.748V43H155.218ZM182.013 43V4.07146H166.956V0.154127H201.599V4.07146H186.542V43H182.013Z"
+                    fill="#4D4C4B" />
+                <path
+                    d="M232.077 17.4149H252.705V25.1271H232.077V17.4149ZM232.812 35.0429H256.132V43H222.957V0.154127H255.337V8.11122H232.812V35.0429ZM261.268 43V36.5731L287.771 4.62234L288.995 8.23364H261.757V0.154127H297.809V6.58101L271.367 38.5318L270.143 34.9205H298.727V43H261.268ZM305.087 28.1264L303.189 0.154127H314.574L312.676 28.1264H305.087ZM308.882 43.4897C307.168 43.4897 305.76 42.9388 304.658 41.837C303.556 40.7353 303.006 39.4295 303.006 37.9197C303.006 36.3691 303.556 35.0837 304.658 34.0636C305.76 33.0026 307.168 32.4722 308.882 32.4722C310.636 32.4722 312.044 33.0026 313.105 34.0636C314.207 35.0837 314.758 36.3691 314.758 37.9197C314.758 39.4295 314.207 40.7353 313.105 41.837C312.044 42.9388 310.636 43.4897 308.882 43.4897Z"
+                    fill="#F26522" />
+            </svg>
+            <svg class="md:hidden block" *ngFor="let item of [1,2,3]" width="315 / 2" height="44 / 2"
+                viewBox="0 0 315 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.224857 43V0.154127H4.75428V39.0827H28.748V43H0.224857ZM36.2685 43V0.154127H40.7979V43H36.2685ZM58.6559 32.3497L58.4723 26.841L84.4246 0.154127H89.6274L70.714 19.9856L68.1432 22.74L58.6559 32.3497ZM54.7386 43V0.154127H59.268V43H54.7386ZM85.5264 43L67.0415 21.6995L70.1019 18.3942L90.9127 43H85.5264ZM102.294 19.3124H124.941V23.1685H102.294V19.3124ZM102.783 39.0827H128.552V43H98.2539V0.154127H127.634V4.07146H102.783V39.0827ZM155.218 43V0.154127H159.748V43H155.218ZM182.013 43V4.07146H166.956V0.154127H201.599V4.07146H186.542V43H182.013Z"
+                    fill="#4D4C4B" />
+                <path
+                    d="M232.077 17.4149H252.705V25.1271H232.077V17.4149ZM232.812 35.0429H256.132V43H222.957V0.154127H255.337V8.11122H232.812V35.0429ZM261.268 43V36.5731L287.771 4.62234L288.995 8.23364H261.757V0.154127H297.809V6.58101L271.367 38.5318L270.143 34.9205H298.727V43H261.268ZM305.087 28.1264L303.189 0.154127H314.574L312.676 28.1264H305.087ZM308.882 43.4897C307.168 43.4897 305.76 42.9388 304.658 41.837C303.556 40.7353 303.006 39.4295 303.006 37.9197C303.006 36.3691 303.556 35.0837 304.658 34.0636C305.76 33.0026 307.168 32.4722 308.882 32.4722C310.636 32.4722 312.044 33.0026 313.105 34.0636C314.207 35.0837 314.758 36.3691 314.758 37.9197C314.758 39.4295 314.207 40.7353 313.105 41.837C312.044 42.9388 310.636 43.4897 308.882 43.4897Z"
+                    fill="#F26522" />
+            </svg>
+        </div>
+    </div>
 </div>
 
 <section class="mt-[6rem]">
@@ -32,21 +162,21 @@
 <section class="w-full">
     <div class="md:flex hidden w-full border-2 border-[#9FC341]">
         <div class="flex justify-center items-center flex-col w-1/2 bg-white space-y-[19px]">
-            <img class="" src="assets/images/monday-sunday.svg">
-            <p class="text-[14px] text-center w-[400px]">Monday to Sunday is a series of personal care
+            <img class="mb-[64px]" src="assets/images/monday-sunday.svg">
+            <p class="text-[14px] xl:text-[20px] text-center w-[539px]">Monday to Sunday is a series of personal care
                 products consisting of shampoo, body wash,
                 and body serum. This series consists of 7 variants
                 on each line, with each variant uniquely representing
                 the day it is named after.</p>
-            <p class="text-[14px] text-center w-[400px]">Additionally, the Monday to Sunday series
+            <p class="text-[14px] xl:text-[20px] text-center w-[520px]">Additionally, the Monday to Sunday series
                 is coloured after the rainbow.</p>
         </div>
         <div class="w-1/2">
-            <img class="w-full" src="assets/images/monday-sunday-image.svg">
+            <img class="w-full" src="assets/images/monday-sunday-image.jpg">
         </div>
     </div>
 
-    <div class="flex md:hidden flex-col items-center justify-center align-middle w-full border-2 border-[#9FC341]">
+    <div class="flex md:hidden flex-col items-center justify-center align-middle w-full">
         <div class="flex p-4 justify-center items-center flex-col w-1/2 bg-white space-y-[19px]">
             <img class="" src="assets/images/monday-sunday.svg">
             <p class="text-[14px] text-center w-[400px]">Monday to Sunday is a series of personal care
@@ -61,43 +191,4 @@
             <img class="w-full" src="assets/images/monday-sunday-image.svg">
         </div>
     </div>
-</section>
-
-<section>
-    <footer class="bg-white py-8">
-        <div class="mx-auto flex flex-col items-center">
-            <!-- Company Logo -->
-            <img src="assets/images/ezpz-black.svg" alt="Company Logo" class="h-12 mb-10">
-
-            <!-- "Connect with us" text -->
-            <h4 class="text-lg font-medium uppercase mb-2">Connect with us</h4>
-
-            <!-- Social Icons -->
-            <div class="relative flex flex-wrap w-full justify-center gap-x-2 mb-4">
-                <a href="#" class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/insta.svg" alt="Social Icon"
-                        class="h-6"></a>
-                <a href="#" class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/fb.svg" alt="Social Icon"
-                        class="h-6"></a>
-                <a href="#" class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/tiktok.svg" alt="Social Icon"
-                        class="h-6"></a>
-                <div class="w-[1px] bg-black"></div>
-                <a href="#" class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/tokped.svg" alt="Social Icon"
-                        class="h-6"></a>
-                <a href="#" class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/shopee.svg" alt="Social Icon"
-                        class="h-6"></a>
-                <a href="#" class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/lazada.svg" alt="Social Icon"
-                        class="h-6"></a>
-                <a href="#" class="ml-auto absolute right-4 md:right-20"><img src="assets/images/socials/wa.svg"
-                        alt="Social Icon" class="h-7"></a>
-
-            </div>
-
-            <!-- Horizontal Divider -->
-            <hr class="w-full border-t border-gray-400 mb-4">
-
-            <!-- Copyright Text -->
-            <p class="text-sm text-gray-600">© Copyright 2023 EZPZ. All rights reserved.</p>
-        </div>
-    </footer>
-
 </section>

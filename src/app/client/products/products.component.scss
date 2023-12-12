@@ -1,3 +1,10 @@
 .background {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 68rem;
     background-image: url("/assets/images/super.svg");
+}
+
+.desc {
+    cursor: url("../../../assets/cursor/ezpz.svg"), auto;
 }

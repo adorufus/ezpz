@@ -3,36 +3,30 @@
         <p class="text-[32px] font-bold">OUR PRODUCTS</p>
 
         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
-            <li class="mr-2">
-                <a href="#"
-                    class="inline-flex items-center justify-center p-4 text-blue-600 border-b-2 border-[#E51F7E] rounded-t-lg active dark:text-[#E51F7E] dark:border-[#E51F7E] group"
+            <li class="mr-2 cursor-pointer">
+                <a (click)="tabChanger('bodywash')"
+                    [class]="type == 'bodywash' ? 'inline-flex items-center justify-center p-4 rounded-t-lg group active dark:text-[#F26522]' : 'inline-flex items-center justify-center p-4 rounded-t-lg group'"
                     aria-current="page">
-                    PERSONAL CARE
+                    BODY WASH
                 </a>
             </li>
-            <li class="mr-2">
-                <a href="#"
-                    class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
-                    SKIN CARE
+            <li class="mr-2 cursor-pointer">
+                <a (click)="tabChanger('bodyserum')"
+                    [class]="type == 'bodyserum' ? 'inline-flex items-center justify-center p-4 rounded-t-lg group active dark:text-[#F26522]' : 'inline-flex items-center justify-center p-4 rounded-t-lg group'">
+                    BODY SERUM
                 </a>
             </li>
-            <li class="mr-2">
-                <a href="#"
-                    class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
-                    MAKE - UP
-                </a>
-            </li>
-            <li class="mr-2">
-                <a href="#"
-                    class="inline-flex items-center justify-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 group">
-                    ACCESSORIES
+            <li class="mr-2 cursor-pointer">
+                <a (click)="tabChanger('shampoo')"
+                    [class]="type == 'shampoo' ? 'inline-flex items-center justify-center p-4 rounded-t-lg group active dark:text-[#F26522]' : 'inline-flex items-center justify-center p-4 rounded-t-lg group'">
+                    SHAMPOO
                 </a>
             </li>
         </ul>
     </div>
 
-    <div class="flex mx-[13.3rem] items-start justify-start align-top">
-        <div class="flex flex-col gap-y-5 basis-1/3">
+    <div class="flex md:mx-[13.3rem] items-start justify-start align-top">
+        <!-- <div class="flex flex-col gap-y-5 basis-1/3">
             <div>
                 <p class="w-[7.1rem] text-[0.875rem] font-[700]">FILTER BERDASARKAN</p>
             </div>
@@ -111,50 +105,111 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="w-full border-l-[0.5px] border-l-[#969696]">
-            <div class="grid grid-cols-3 gap-4">
-                <div class="flex flex-col gap-y-3 justify-center items-center text-center">
-                    <img src="assets/images/personal-care/FRIDAY.svg">
-                    <p class="w-1/2 text-[0.5rem] font-[700]">THANK GOT IT`S FRIDAY
-                        BODY SERUM/300 ml</p>
-                    <p class="text-[0.5rem]">IDR 100,000</p>
+        </div> -->
+        <!-- <div class="w-full border-l-[0.5px] border-l-[#969696]"> -->
+        <div class="w-full md:block flex justify-center">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10 md:gap-4 ">
+                <div
+                    class="flex h-[417px] flex-col justify-center items-center text-center transition-all delay-100 hover:bg-[#f2222284] group">
+                    <img class="h-[209px] transition-all delay-100 group-hover:scale-90 scale-100"
+                        src='assets/images/{{type}}/MONDAY.png'>
+                    <p class="mt-[2rem] text-[1.25rem] text-[#4D4C4B]">I LOVE</p>
+                    <p class="text-[1.25rem] font-bold text-[#4D4C4B]">MONDAY</p>
+                    <p
+                        class="uppercase mt-[1rem] text-ezpz transition-all delay-75 group-hover:text-white text-[0.75rem] font-[600]">
+                        {{type == 'bodywash' ? 'body
+                        wash' : type == 'bodyserum' ? 'BODY SERUM' :
+                        'SHAMPOO'}}</p>
+                    <p
+                        class="uppercase transition-all delay-100 group-hover:scale-125 scale-100 mt-[1rem] font-light text-[#4D4C4B]">
+                        IDR {{type == 'bodywash' ? '89,000' : type
+                        == 'bodyserum' ? '119,000' :
+                        '89,000'}}</p>
                 </div>
-                <div class="flex flex-col gap-y-3 justify-center items-center text-center">
-                    <img src="assets/images/personal-care/MONDAY.svg">
-                    <p class="w-1/2 text-[0.5rem] font-[700]">I LOVE MONDAY
-                        BODY SERUM/300 ml</p>
-                    <p class="text-[0.5rem]">IDR 100,000</p>
+                <div
+                    class="flex h-[417px] flex-col gap-y-0 justify-center items-center text-center transition-all delay-100 hover:bg-[#f2912284] group">
+                    <img class="h-[209px] transition-all delay-100 group-hover:scale-90 scale-100"
+                        src="assets/images/{{type}}/TUESDAY.png">
+                    <p class="mt-[2rem] text-[1.25rem] font-bold text-[#4D4C4B]">TUESDAY</p>
+                    <p class="text-[1.25rem] text-[#4D4C4B]">BOOSTER</p>
+                    <p
+                        class="uppercase mt-[1rem] text-ezpz transition-all delay-75 group-hover:text-white text-[0.75rem] font-[600]">
+                        {{type == 'bodywash' ? 'body
+                        wash' : type == 'bodyserum' ? 'BODY SERUM' :
+                        'SHAMPOO'}}</p>
+                    <p
+                        class="uppercase mt-[1rem] font-light text-[#4D4C4B] transition-all delay-100 group-hover:scale-125 scale-100">
+                        IDR {{type == 'bodywash' ? '89,000' : type
+                        == 'bodyserum' ? '119,000' :
+                        '89,000'}}</p>
                 </div>
-                <div class="flex flex-col gap-y-3 justify-center items-center text-center">
-                    <img src="assets/images/personal-care/SATURDAY.svg">
-                    <p class="w-1/2 text-[0.5rem] font-[700]">DATING SATURDAY
-                        BODY SERUM/300 ml</p>
-                    <p class="text-[0.5rem]">IDR 100,000</p>
+                <div
+                    class="flex h-[417px] flex-col gap-y-0 justify-center items-center text-center transition-all delay-100 hover:bg-[#91b22e84] group">
+                    <img class="h-[209px] transition-all delay-100 group-hover:scale-90 scale-100"
+                        src="assets/images/{{type}}/WEDNESDAY.png">
+                    <p class="mt-[2rem] text-[1.25rem] font-bold text-[#4D4C4B]">WEDNESDAY</p>
+                    <p class="text-[1.25rem] text-[#4D4C4B]">BE NICE</p>
+                    <p
+                        class="uppercase mt-[1rem] text-ezpz transition-all delay-75 group-hover:text-white text-[0.75rem] font-[600]">
+                        {{type == 'bodywash' ? 'body
+                        wash' : type == 'bodyserum' ? 'BODY SERUM' :
+                        'SHAMPOO'}}</p>
+                    <p
+                        class="uppercase mt-[1rem] font-light text-[#4D4C4B] transition-all delay-100 group-hover:scale-125 scale-100">
+                        IDR {{type == 'bodywash' ? '89,000' : type
+                        == 'bodyserum' ? '119,000' :
+                        '89,000'}}</p>
                 </div>
-                <div class="flex flex-col gap-y-3 justify-center items-center text-center">
-                    <img src="assets/images/personal-care/SUNDAY.svg">
-                    <p class="w-1/2 text-[0.5rem] font-[700]">SUNDAY BLESSING
-                        BODY SERUM/300 ml</p>
-                    <p class="text-[0.5rem]">IDR 100,000</p>
+                <div
+                    class="flex h-[417px] flex-col gap-y-0 justify-center items-center text-center transition-all delay-100 hover:bg-[#29f22284] group">
+                    <img class="h-[209px] transition-all delay-100 group-hover:scale-90 scale-100"
+                        src="assets/images/{{type}}/THURSDAY.png">
+                    <p class="mt-[2rem] text-[1.25rem] text-[#4D4C4B]">FINALLY</p>
+                    <p class="text-[1.25rem] font-bold text-[#4D4C4B]">THURSDAY</p>
+                    <p
+                        class="uppercase mt-[1rem] text-ezpz transition-all delay-75 group-hover:text-white text-[0.75rem] font-[600]">
+                        {{type == 'bodywash' ? 'body
+                        wash' : type == 'bodyserum' ? 'BODY SERUM' :
+                        'SHAMPOO'}}</p>
+                    <p
+                        class="uppercase mt-[1rem] font-light text-[#4D4C4B] transition-all delay-100 group-hover:scale-125 scale-100">
+                        IDR {{type == 'bodywash' ? '89,000' : type
+                        == 'bodyserum' ? '119,000' :
+                        '89,000'}}</p>
                 </div>
-                <div class="flex flex-col gap-y-3 justify-center items-center text-center">
-                    <img src="assets/images/personal-care/THURSDAY.svg">
-                    <p class="w-1/2 text-[0.5rem] font-[700]">FINALLY THURSDAY
-                        BODY SERUM/300 ml</p>
-                    <p class="text-[0.5rem]">IDR 100,000</p>
+                <div
+                    class="flex h-[417px] flex-col gap-y-0 justify-center items-center text-center transition-all delay-100 hover:bg-[#22adf284] group">
+                    <img class="h-[209px] transition-all delay-100 group-hover:scale-90 scale-100" src="assets/images/{{type}}/FRIDAY.png">
+                    <p class="mt-[2rem] text-[1.25rem] text-[#4D4C4B]">THANKS GOD IT'S</p>
+                    <p class="text-[1.25rem] font-bold text-[#4D4C4B]">FRIDAY</p>
+                    <p class="uppercase mt-[1rem] text-ezpz transition-all delay-75 group-hover:text-white text-[0.75rem] font-[600]">{{type == 'bodywash' ? 'body
+                        wash' : type == 'bodyserum' ? 'BODY SERUM' :
+                        'SHAMPOO'}}</p>
+                    <p class="uppercase mt-[1rem] font-light text-[#4D4C4B] transition-all delay-100 group-hover:scale-125 scale-100">IDR {{type == 'bodywash' ? '89,000' : type
+                        == 'bodyserum' ? '119,000' :
+                        '89,000'}}</p>
                 </div>
-                <div class="flex flex-col gap-y-3 justify-center items-center text-center">
-                    <img src="assets/images/personal-care/TUESDAY.svg">
-                    <p class="w-1/2 text-[0.5rem] font-[700]">BOOSTER TUESDAY
-                        BODY SERUM/300 ml</p>
-                    <p class="text-[0.5rem]">IDR 100,000</p>
+                <div class="flex h-[417px] flex-col gap-y-0 justify-center items-center text-center transition-all delay-100 hover:bg-[#f222ef84] group">
+                    <img class="h-[209px] transition-all delay-100 group-hover:scale-90 scale-100" src="assets/images/{{type}}/SATURDAY.png">
+                    <p class="mt-[2rem] text-[1.25rem] text-[#4D4C4B]">DARING</p>
+                    <p class="text-[1.25rem] font-bold text-[#4D4C4B]">SATURDAY</p>
+                    <p class="uppercase mt-[1rem] text-ezpz transition-all delay-75 group-hover:text-white text-[0.75rem] font-[600]">{{type == 'bodywash' ? 'body
+                        wash' : type == 'bodyserum' ? 'BODY SERUM' :
+                        'SHAMPOO'}}</p>
+                    <p class="uppercase mt-[1rem] font-light text-[#4D4C4B] transition-all delay-100 group-hover:scale-125 scale-100">IDR {{type == 'bodywash' ? '89,000' : type
+                        == 'bodyserum' ? '119,000' :
+                        '89,000'}}</p>
                 </div>
-                <div class="flex flex-col gap-y-3 justify-center items-center text-center">
-                    <img src="assets/images/personal-care/WEDNESDAY.svg">
-                    <p class="w-1/2 text-[0.5rem] font-[700]">WEDNESDAY BOOSTER
-                        BODY SERUM/300 ml</p>
-                    <p class="text-[0.5rem]">IDR 100,000</p>
+                <div class="flex h-[417px] flex-col gap-y-0 justify-center items-center text-center transition-all delay-100 hover:bg-[#c122f284] group">
+                    <img class="h-[209px] transition-all delay-100 group-hover:scale-90 scale-100" src="assets/images/{{type}}/SUNDAY.png">
+                    <p class="mt-[2rem] text-[1.25rem] font-bold text-[#4D4C4B]">SUNDAY</p>
+                    <p class="text-[1.25rem] text-[#4D4C4B]">BLESSING</p>
+                    <p class="uppercase mt-[1rem] text-ezpz transition-all delay-75 group-hover:text-white text-[0.75rem] font-[600]">{{type == 'bodywash' ? 'body
+                        wash' : type == 'bodyserum' ? 'BODY SERUM' :
+                        'SHAMPOO'}}</p>
+                    <p class="uppercase mt-[1rem] font-light text-[#4D4C4B] transition-all delay-100 group-hover:scale-125 scale-100">IDR {{type == 'bodywash' ? '89,000' : type
+                        == 'bodyserum' ? '119,000' :
+                        '89,000'}}</p>
                 </div>
             </div>
         </div>

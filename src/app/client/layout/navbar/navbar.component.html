@@ -1,35 +1,29 @@
-<nav class="md:hidden  z-50 fixed w-full h-[2rem] group ">
-    <div class="relative max-w-screen-xl flex mx-auto bg-white group-hover:bg-ezpz">
-        <div class="z-50 px-3 py-3 justify-start w-full flex md:w-auto md:order-1" id="navbar-language">
-            <ul
-                class="flex font-medium gap-x-4 md:space-x-8 w-full md:mt-0 md:border-0 items-center">
+<nav class="md:hidden z-50 fixed w-full h-[2rem] group ">
+    <div class="relative px-3 py-3 w-full bg-white group-hover:bg-[#F26522]">
+        <ul class="flex font-normal w-full md:mt-0 items-center justify-between">
+            <li routerLink="/">
+                <img routerLink="/" class="block group-hover:hidden" src="assets/images/ezpz-logo-inactive.svg">
+                <img routerLink="/" class="hidden group-hover:block" src="assets/images/ezpz-logo-active.svg">
+            </li>
+            <li (click)="navigateToProducts()"
+                class="cursor-pointer text-sm text-[#F26522] group-hover:text-white">PRODUCTS</li>
 
-                <li>
-                    <img class="block group-hover:hidden" src="assets/images/ezpz-logo-inactive.svg">
-                    <img class="hidden group-hover:block" src="assets/images/ezpz-logo-active.svg">
-                </li>
-                <li class="grow"></li>
-                <li class=" text-ezpz group-hover:text-white">TT</li>
-                <li class=" text-ezpz group-hover:text-white">FB</li>
-                <li class=" text-ezpz group-hover:text-white">IG</li>
-
-            </ul>
-        </div>
+        </ul>
     </div>
 </nav>
 <aside id="default-sidebar"
-    class="fixed group md:block hidden top-0 left-0 z-40 w-[4%] h-screen transition-transform -translate-x-full sm:translate-x-0"
+    class="fixed group md:block hidden top-0 left-0 z-40 w-[5%] h-screen transition-transform -translate-x-full sm:translate-x-0"
     aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-white group-hover:bg-ezpz">
-        <ul class="space-y-2 h-full  pb-10 flex flex-col gap-y-4 font-medium">
-            <li class="cursor-pointer">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-white group-hover:bg-[#F26522]">
+        <ul
+            class="space-y-2 h-full pt-4 pb-10 flex flex-col justify-center items-center gap-y-4 font-medium text-[12px]">
+            <li routerLink="/" class="cursor-pointer">
                 <img class="block group-hover:hidden" src="assets/images/ezpz-logo-inactive.svg">
                 <img class="hidden group-hover:block" src="assets/images/ezpz-logo-active.svg">
             </li>
             <div class="grow"></div>
-            <li class="-rotate-90 cursor-pointer text-ezpz group-hover:text-white">TT</li>
-            <li class="-rotate-90 cursor-pointer text-ezpz group-hover:text-white">FB</li>
-            <li class="-rotate-90 cursor-pointer text-ezpz group-hover:text-white">IG</li>
+            <li (click)="navigateToProducts()"
+                class="-rotate-90 pl-4 cursor-pointer text-[#F26522] group-hover:text-white">PRODUCTS</li>
         </ul>
     </div>
 </aside>

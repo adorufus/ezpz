@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.cdnfonts.com/css/montserrat");
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 * {
     font-family: 'Montserrat', sans-serif;

@@ -1,4 +1,55 @@
 <app-navbar></app-navbar>
-<div class="relative md:ml-10 ml-0">
+<div (scroll)="onScroll()" class="relative md:ml-10 ml-0">
     <router-outlet></router-outlet>
 </div>
+<section>
+    <footer class="bg-white py-9">
+        <div class="mx-auto flex flex-col items-center pt-[44px]">
+            <!-- Company Logo -->
+            <img src="assets/images/ezpz-black.svg" alt="Company Logo" class="h-[64px] mb-10">
+
+            <!-- "Connect with us" text -->
+            <h4 class="text-[15px] text-[#F26522] font-medium uppercase mb-[26px]">Connect with us</h4>
+
+            <!-- Social Icons -->
+            <div class="relative flex flex-wrap w-full justify-center gap-x-2 mb-[80px]">
+                <a href="https://instagram.com/ezpz.indonesia?igshid=NzZlODBkYWE4Ng==" target="_blank"
+                    rel="noopener noreferrer" class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/insta.svg"
+                        alt="Social Icon" class="h-6"></a>
+                <a href="facebook.com" target="_blank" rel="noopener noreferrer" class="mx-2 mb-2 sm:mb-0"><img
+                        src="assets/images/socials/fb.svg" alt="Social Icon" class="h-6"></a>
+                <a href="https://www.tiktok.com/@ezpz.id" target="_blank" rel="noopener noreferrer"
+                    class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/tiktok.svg" alt="Social Icon"
+                        class="h-6"></a>
+                <!-- <div class="w-[1px] bg-black"></div> -->
+                <a href="https://www.tokopedia.com/ezpzofficial" target="_blank" rel="noopener noreferrer"
+                    class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/tokped.svg" alt="Social Icon"
+                        class="h-6"></a>
+                <a href="https://shopee.co.id/ezpz.id" target="_blank" rel="noopener noreferrer"
+                    class="mx-2 mb-2 sm:mb-0"><img src="assets/images/socials/shopee.svg" alt="Social Icon"
+                        class="h-6"></a>
+
+            </div>
+
+            <!-- <a href="https://wa.me/message/FPQ3YKLYZB4AN1" target="_blank" rel="noopener noreferrer"
+                    class="ml-auto fixed scale-150"><img src="assets/images/socials/wa.svg"
+                        alt="Social Icon" class="h-7"></a> -->
+
+            <!-- Horizontal Divider -->
+            <hr class="w-full border-t border-gray-400 mb-[32px]">
+
+            <!-- Copyright Text -->
+            <p class="text-[12px] text-gray-600">© Copyright 2023 EZPZ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button *ngIf="!shouldHideAfterAnimEnd" (animationstart)="onAnimationStart" (animationend)="onAnimationEnd"
+        [class]="isHidden ? 'fixed animate-pulseBackCustom bottom-32 right-10 h-[80px] w-[80px]' : 'fixed animate-pulseCustom bottom-32 right-10 h-[80px] w-[80px]'">
+        <a href="https://wa.me/message/FPQ3YKLYZB4AN1" target="_blank" rel="noopener noreferrer">
+            <img class="w-full h-full" src="assets/images/socials/wa.svg" alt="Social Icon">
+        </a>
+
+    </button>
+
+
+</section>

@@ -18,7 +18,10 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@syncfusion/ej2-angular-buttons": "^23.2.7",
+    "animate.css": "^4.1.1",
     "flowbite": "^1.8.1",
+    "ngx-owl-carousel-o": "16.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
