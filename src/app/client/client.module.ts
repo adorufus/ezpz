@@ -10,6 +10,9 @@ import { OurProductsComponent } from './our-products/our-products.component';
 import { SkinsightComponent } from './skinsight/skinsight.component';
 import { FabModule } from '@syncfusion/ej2-angular-buttons';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BodyserumComponent } from './products/bodyserum/bodyserum.component';
+import { BodywashComponent } from './products/bodywash/bodywash.component';
+import { ShampooComponent } from './products/shampoo/shampoo.component';
 
 const routes: Routes = [
   {
@@ -31,7 +34,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [ClientComponent, NavbarComponent, ProductsComponent, AboutComponent, OurProductsComponent, SkinsightComponent, FollowCursorDirective],
+  declarations: [ClientComponent, NavbarComponent, ProductsComponent, AboutComponent, OurProductsComponent, SkinsightComponent, FollowCursorDirective, BodyserumComponent, BodywashComponent, ShampooComponent],
   imports: [
     RouterModule.forChild(routes),
     CommonModule,

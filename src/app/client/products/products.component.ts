@@ -29,7 +29,7 @@ export class ProductsComponent implements OnInit {
         items: 1
       },
       400: {
-        items: 13
+        items: 1
       },
       740: {
         items: 1

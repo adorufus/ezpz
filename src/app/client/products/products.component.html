@@ -1,5 +1,5 @@
 <section class="">
-    <owl-carousel-o  [options]="customOptions">
+    <owl-carousel-o [options]="customOptions">
         <ng-template carouselSlide id="owl-slide-1"><img class="w-full object-cover pt-[55px] md:pt-0"
                 src="assets/images/banner2.jpg" /></ng-template>
         <ng-template carouselSlide id="owl-slide-2"><img class="w-full pt-[55px] md:pt-0"
@@ -61,34 +61,39 @@
     </div>
 </div>
 
-<div class="background">
-    <section class="mx-[0rem] md:py-5 md:mx-[10.19rem] gap-y-[6rem] flex flex-col items-center justify-center">
-        <div class="flex flex-col mt-16 justify-center items-center text-center">
+<div class="background lg:h-[68rem]">
+    <section
+        class="mx-[0rem] md:py-5 md:mx-[10.19rem] gap-y-[1rem] lg:gap-y-[6rem] flex flex-col items-center justify-center">
+        <div class="flex flex-col scale-[.50] lg:scale-100 mt-0 md:mt-16 justify-center items-center text-center">
             <img src="assets/images/product-text.svg" />
         </div>
 
         <div
-            class="w-full group/root grid grid-cols-3 space-x-6 space-y-1 md:space-x-16 md:space-y-10 overflow-x-clip lg:overflow-visible md:mr-9">
-            <img class="z-20 group-hover/root:block hidden pointer-events-none" src="assets/cursor/ezpz.png"
+            class="w-full group/root grid grid-cols-3 space-y-1 md:space-x-16 md:space-y-10 overflow-x-hidden lg:overflow-visible md:mr-9">
+            <img class="z-20 group-hover/root:md:block hidden pointer-events-none" src="assets/cursor/ezpz.png"
                 alt="custom cursor" appFollowCursor>
-            <div class="group relative" (click)="navigateToProductsPage('bodywash')">
-                <img class="w-full scale-[1.8]" src="assets/images/products/bodywash.svg">
-                <img class="absolute left-0 top-7 w-full hidden group-hover:block cursor-none scale-[1.2]"
+            <div class="group relative h-[145px] w-[145px] md:h-[291px] md:w-[291px] flex justify-center"
+                (click)="navigateToProductsPage('bodywash')">
+                <img class="w-full h-full object-contain" src="assets/images/products/bodywash.png">
+                <img class="absolute hidden md:block left-0 top-5 lg:top-5 w-full opacity-0 scale-0 transition-all delay-75 group-hover:opacity-100 cursor-none group-hover:scale-[1.2]"
                     src="assets/images/bodywash.svg">
             </div>
-            <div class="group relative" (click)="navigateToProductsPage('bodyserum')">
-                <img class="w-full scale-[1.8]" src="assets/images/products/bodyserum.svg">
-                <img class="absolute left-0 top-7 w-full hidden group-hover:block cursor-none scale-[1.2]"
+            <div class="group relative h-[145px] w-[145px] md:h-[291px] md:w-[291px] flex justify-center"
+                (click)="navigateToProductsPage('bodyserum')">
+                <img class="w-full h-full object-contain" src="assets/images/products/bodyserum.png">
+                <img class="absolute hidden md:block left-0 top-5 lg:top-5 w-full opacity-0 scale-0 transition-all delay-75 group-hover:opacity-100 cursor-none group-hover:scale-[1.2]"
                     src="assets/images/bodyserum.svg">
             </div>
-            <div class="group relative" (click)="navigateToProductsPage('shampoo')">
-                <img class="w-full scale-[1.8]" src="assets/images/products/shampo.svg">
-                <img class="absolute left-0 top-7 w-full hidden group-hover:block cursor-none scale-[1.2]"
+            <div class="group relative h-[145px] w-[145px] md:h-[291px] md:w-[291px] flex justify-center"
+                (click)="navigateToProductsPage('shampoo')">
+                <img class="w-full h-full object-contain" src="assets/images/products/shampo.png">
+                <img class="absolute hidden md:block left-0 top-5 lg:top-5 w-full opacity-0 scale-0 transition-all delay-75 group-hover:opacity-100 cursor-none group-hover:scale-[1.2]"
                     src="assets/images/shampoo.svg">
             </div>
         </div>
 
-        <div class="w-[26rem] md:mt-16 md:w-[600px] mx-[2rem] md:text-[24px] text-center">Elevate your daily routine
+        <div class="w-[20rem] text-[12px] mt-10 md:mt-16 md:w-[600px] mx-[2rem] md:text-[24px] text-center">Elevate your daily
+            routine
             from Monday to Sunday, to unlock
             confidence and peace by the end of every week.</div>
 
@@ -109,7 +114,7 @@
                 This is your skin insights.</div>
         </div> -->
     </section>
-    <div class="relative h-auto w-full flex overflow-x-hidden mt-1 md:mt-10">
+    <div class="relative h-auto w-full flex overflow-x-hidden mt-10 lg:mt-52">
         <div class="flex h-full w-full animate-marquee justify-between gap-x-10 px-10 md:px-14 md:gap-x-14">
             <svg class="hidden md:block" *ngFor="let item of [1,2,3]" width="315" height="44" viewBox="0 0 315 44"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,19 +161,22 @@
     </div>
 </div>
 
-<section class="mt-[6rem]">
+<section class="mt-[3rem] lg:mt-[6rem]">
     <img src="assets/images/philoshopy.svg" class="w-full" />
 </section>
 <section class="w-full">
     <div class="md:flex hidden w-full border-2 border-[#9FC341]">
         <div class="flex justify-center items-center flex-col w-1/2 bg-white space-y-[19px]">
             <img class="mb-[64px]" src="assets/images/monday-sunday.svg">
-            <p class="text-[14px] xl:text-[20px] text-center w-[539px]">Monday to Sunday is a series of personal care
+            <p class="text-[14px] xl:text-[1.25rem] text-black text-center w-[550px]">Monday to Sunday is a series
+                of
+                personal care
                 products consisting of shampoo, body wash,
                 and body serum. This series consists of 7 variants
                 on each line, with each variant uniquely representing
                 the day it is named after.</p>
-            <p class="text-[14px] xl:text-[20px] text-center w-[520px]">Additionally, the Monday to Sunday series
+            <p class="text-[14px] xl:text-[20px] text-black text-center w-[472px]">Additionally, the Monday to
+                Sunday series
                 is coloured after the rainbow.</p>
         </div>
         <div class="w-1/2">
@@ -179,12 +187,12 @@
     <div class="flex md:hidden flex-col items-center justify-center align-middle w-full">
         <div class="flex p-4 justify-center items-center flex-col w-1/2 bg-white space-y-[19px]">
             <img class="" src="assets/images/monday-sunday.svg">
-            <p class="text-[14px] text-center w-[400px]">Monday to Sunday is a series of personal care
+            <p class="text-[8px] text-black text-center w-[300px]">Monday to Sunday is a series of personal care
                 products consisting of shampoo, body wash,
                 and body serum. This series consists of 7 variants
                 on each line, with each variant uniquely representing
                 the day it is named after.</p>
-            <p class="text-[14px] text-center w-[400px]">Additionally, the Monday to Sunday series
+            <p class="text-[8px] text-black text-center w-[300px]">Additionally, the Monday to Sunday series
                 is coloured after the rainbow.</p>
         </div>
         <div class="w-full">
